@@ -1,17 +1,17 @@
 Survival Analysis for Metastatic Breast Cancer Patients
 Undergraduate capstone project · SAS · SEER 1973–2015
 
-Overview
+**Overview**
 This project investigates whether survival time for metastatic (AJCC stage IV) breast cancer patients improved between 1988 and 2009, and whether survival is modified by a patient's age at diagnosis, race, or marital status. The analysis uses the NCI SEER (Surveillance, Epidemiology, and End Results) registry, one of the most comprehensive population-based cancer databases in the United States.
 The full write-up is included as long_term_metastatic.pdf.
 
-Research Questions
+**Research Questions**
 
 Has survival time for metastatic breast cancer patients improved across diagnosis eras (1988–2009)?
 Is survival time modified by age at diagnosis, race, or marital status?
 
 
-Data
+**Data**
 Source: SEER 1973–2015, accessed via SEER*Stat
 Files used: Four registry text files merged into a combined dataset (N = 1,631,572 breast cancer patients total)
 Study cohort construction:
@@ -22,7 +22,7 @@ Final analytic sample after exclusions: N = 35,649
 
 The data is not included in this repository (access requires a SEER data use agreement; apply at seer.cancer.gov).
 
-Methods
+**Methods**
 
 Kaplan-Meier survival analysis with log-rank tests, stratified by year of diagnosis, age group, race, and marital status
 Cox proportional hazards regression for univariate and multivariate modeling of hazard ratios
@@ -30,7 +30,7 @@ Logistic regression (exploratory) for long-term survivor status (≥ 60 months)
 
 Key covariates: year of diagnosis (grouped 1988–1993, 1993–1998, 1998–2003, 2003–2009), age at diagnosis (5 groups), race/ethnicity (Caucasian, Black, Hispanic, Asian, Other), marital status (married, single, unmarried partner), ER/PR receptor status.
 
-Key Findings
+**Key Findings**
 
 Survival improved significantly across diagnosis eras overall (χ²=105.84, p<.0001), with meaningful improvement beginning around 1998 — consistent with the clinical introduction of targeted therapies such as trastuzumab in the late 1990s
 Younger patients (≤49) showed greater survival improvement over time than older age groups (≥80)
@@ -46,7 +46,7 @@ Repository Structure
 │                                 # variable derivation, KM curves, and Cox regression
 └── long_term_metastatic.pdf      # Full written report with figures, tables, and results
 
-Reflections (Written in 2025)
+**Reflections (Written in 2025)**
 This was an undergraduate capstone project. Looking back, a few things I'd approach differently now:
 
 The marital status finding warrants caution — married patients may have better access to care, more social support, and differ on unmeasured socioeconomic variables; the association is almost certainly confounded
